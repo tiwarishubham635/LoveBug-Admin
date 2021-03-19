@@ -67,7 +67,7 @@ function About() {
         setStartTime(value)
     }
 
-    const [end_time, setend_time] = useState('')
+    const [end_time, setend_time] = useState(new Date())
     function handleChangeend_time(event)
     {
         const value = event.target.value
@@ -93,10 +93,20 @@ function About() {
     {
         const obj = {name, start_time,end_time}
         console.log('OBJECT',obj);
-        axios.post('/api/contests',obj).then(response=>{console.log(response);if(response.data.success) history.push({
-            pathname:"/LocationsForm",
-            locationProps: locations
-        })}).catch(error=>setFlag(error))
+        axios.post('/api/contests',obj)
+        .then(response=>
+                    {
+                        console.log(response);
+                        if(response.data.success)
+                        {
+                            let contest = response.data.contest._id;
+                            history.push({
+                                pathname:"/LocationsForm",
+                                locationProps: {locations, contest}
+                            })
+                        } 
+                    }
+            ).catch(error=>setFlag(error))
     }
     
 
@@ -158,7 +168,7 @@ function About() {
                                   <Form.Label style={{fontSize:"3vh"}}>Starting Date of Contest</Form.Label>
                                 </Col>
                                 
-                                <Col>
+                                <Col style={{width:"2vw"}}>
                                     <DateTimePicker onChange={setstart_time} value={start_time}/>  
                                 </Col>
                             </Row>
