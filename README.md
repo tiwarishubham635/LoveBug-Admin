@@ -22,7 +22,7 @@ The primary identity of the website, i.e., the name is LoveBug. The programmers 
 - He creates multiple intermediate checkoints between the two ( We are using Google APIs for these )
 - For each location he enters 3 questions ( easy , medium and hard )
 - Now he enters email address for the participants
-- The participants are notified at there end that they have been added to a contest ( you can access participant end at : URL )
+- The participants are notified at there end that they have been added to a contest ( you can access participant end at : https://lovebugmain.herokuapp.com/ )
 - He goes to the actual physical starting point ( yea just like a race , but for techies )
 - He solves one question out of 3 , on successfull submission our algorithm gives him a new address ( which is also shown in map at his end ) 
 - He then again moves to that address and solves another set of problems ( yea , programming will not leave your hand L ;) )
