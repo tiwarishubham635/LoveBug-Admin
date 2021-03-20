@@ -47,3 +47,15 @@ npm i
 ```
 node index.js
 ```
+
+3. User End
+
+```
+npm run serve
+```
+
+4. Admin End
+
+```
+npm start
+```
