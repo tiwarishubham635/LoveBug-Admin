@@ -20,7 +20,7 @@ The primary identity of the website, i.e., the name is LoveBug. The programmers 
 - Provides One-to-One Interactions and Group Chats
 - Substantial Practice Set for Skill Development
 
-## ✔ Technologies used ⚙
+## ✔ Technologies used
 
 ### Front End :
 
