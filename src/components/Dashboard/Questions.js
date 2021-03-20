@@ -9,8 +9,7 @@ function Questions(props) {
 
     var contest = props.location.QuestionProps.contest;
     var location_id = props.location.QuestionProps.location_id;
-    var location_count = props.location.QuestionProps.count;
-    var locations = props.location.QuestionProps.n_for_pass;
+    var locations = props.location.QuestionProps.n;
     var participants = props.location.QuestionProps.participants;
 
     locations = locations - 1
@@ -49,7 +48,7 @@ function Questions(props) {
         console.log('inputs',obj)
         axios.post('/api/questions',obj)
         .then(response =>{
-            console.log(response)
+            console.log('YAYYYYYYYYYYYYYYYYYY',response)
             setCount(count+1);
             setDiff(diff+1);
             console.log('diff',diff,count)
@@ -63,7 +62,7 @@ function Questions(props) {
             }
             else
             {
-                setDiff(0)
+                console.log('we r GGGGGGGGGGGGGGGGGGGGGGGGGGG')
                 setDescription('')
                 setName('')
                 setTest_case_correct_output('')
@@ -130,7 +129,7 @@ function Questions(props) {
                             </Col>
                             
                             <Col>
-                            <Form.Control as="select" value = {diff} onChange={handleDiff} style={{width:"10vw"}}>
+                            <Form.Control as="select" value = {diff} onChange={handleDiff} style={{width:"10vw"}} disabled>
                                     <option>0</option>
                                     <option>1</option>
                                     <option>2</option>

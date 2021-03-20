@@ -10,7 +10,15 @@ function LocationsForm(props) {
     let n = props.location.locationProps.locations;
     let contest = props.location.locationProps.contest
     let participants = props.location.locationProps.participants;
-    var n_for_pass = n;
+    let history = useHistory();
+
+    if(n<1)
+    {
+        history.push({
+            pathname:"/ParticipantsForm",
+            participantProps: {contest, participants}
+        })
+    }
     
     
     const [count, setCount] = useState(1)
@@ -25,61 +33,59 @@ function LocationsForm(props) {
         setLng(event.target.value)
     }
 
-    
-
-    let history = useHistory();
         
-        function handleSubmit() 
+    function handleSubmit() 
+    {
+        let obj = {lat, lng, contest};
+        if(count===n)
         {
-            let obj = {lat, lng, contest};
-            if(count===n-1)
-            {
-                obj.is_last = true;
-            }
-            else
-            {
-                obj.is_last = false;
-            }
-            console.log('obj', obj)
-            axios.post('/api/locations',obj)
-            .then(response=>
-                    {
-                        locationID.push(response.data.location._id)
-                        console.log(response.data.location._id)
-                        console.log('response',response.data);
-                        var location_id = response.data.location._id;
-                        history.push({
-                            pathname:'/Questions',
-                            QuestionProps: {location_id, contest, count, n_for_pass, participants}
-                        })
-                        
-                      setCount(count+1);
-                      if(count > n)
-                      {
-                          console.log("success")
-                          console.log(locationID)
-                          for(var j =0; j<locationID.length-1; j++)
-                          {
-                              var obj = {a1:locationID[j], a2:locationID[j+1]}
-                              console.log(obj)
-                              axios.post('/api/locations/link', obj)
-                              .then(response=>{console.log(response.data)})
-                              .catch(error=>alert(error.message))
-                          }
-                          history.push({
-                            pathname:"/ParticipantsForm",
-                            participantProps: {contest, participants}
-                        })
-                      }
-                      else
-                      {
-                          setLat(0)
-                          setLng(0)
-                      }
-                    }  
-                )
-            .catch(error => alert(error.message))
+            obj.is_last = true;
         }
+        else
+        {
+            obj.is_last = false;
+        }
+        console.log('obj', obj)
+        axios.post('/api/locations',obj)
+        .then(response=>
+                {
+                    setCount(count+1);
+                    locationID.push(response.data.location._id)
+                    console.log('RESPONSE DATA LOCATION ID',response.data.location._id)
+                    console.log('response',response.data);
+                    var location_id = response.data.location._id;
+                    history.push({
+                        pathname:'/Questions',
+                        QuestionProps: {location_id, contest, n, participants}
+                    })
+
+                    if(count > n)
+                    {
+                        console.log("success")
+                        console.log(locationID)
+                        for(var j =0; j<locationID.length-1; j++)
+                        {
+                            var obj = {a1:locationID[j], a2:locationID[j+1]}
+                            console.log(obj)
+                            axios.post('/api/locations/link', obj)
+                            .then(response=>{console.log(response.data)})
+                            .catch(error=>alert(error.message))
+                        }
+                        history.push({
+                        pathname:"/ParticipantsForm",
+                        participantProps: {contest, participants}
+                    })
+                    }
+                    else
+                    {
+                        setLat(0)
+                        setLng(0)
+                    }
+
+                }  
+            )
+        .catch(error => alert(error.message))
+    }
     return (
         <div className='About'>
             <Card style={{background:"#4a47a3", width:"50vw", height:"75vh", marginTop:"2rem",marginLeft:"32vw", marginRight:"auto", color:"white", padding:"5vh", paddingLeft:"7vh"}}>
