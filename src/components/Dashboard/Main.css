@@ -5,6 +5,7 @@
   /*align-items: center;
   justify-content: center;*/
   font-size: calc(10px + 2vmin);
+  z-index: 0;
 }
 
 .Short-Main {
@@ -17,6 +18,7 @@
 
   font-size: calc(10px + 2vmin);
   margin-left: auto;
+  z-index: 0;
 }
 
 .list {
@@ -41,9 +43,6 @@
   margin-bottom: 0.5rem;
   font-weight: bold;
   color: #440a67;
-}
-
-.x {
 }
 
 .y {

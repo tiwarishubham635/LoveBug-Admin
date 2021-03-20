@@ -1,36 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {Card, Form, Row, Col, Button } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './About.css';
 import DateTimePicker from 'react-datetime-picker';
-import useAxios from 'axios-hooks';
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
 
 
 function About() {
-
-   /* const[{data, loading, error, response}, refetch] = useAxios({
-        method:'GET',
-        url:'https://reqres.in/api/users?delay=1',
-    });
-
-    const [text, setText] = useState('')
-    useEffect(() => {
-        axios.get('https://api.npms.io/v2/search?q=react').then(response => setText(response)).catch(error=>setText(error))
-        
-    }, [])
-
-    console.log('yeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',text)
-
-    useEffect(() => {
-        const str = {text:{text}};
-        axios.post('https://reqres.in/api/articles', str).then(response => setText(response)).catch(error=>setText(error))
-        
-    }, [])
-
-    console.log('maaaaaaaeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',text) */
-
 
     const [participants, setParticipants] = useState(0)
     function handleChangeParticipants(event)
@@ -53,33 +30,8 @@ function About() {
         setname(value)
     }
 
-    const [start_time, setstart_time] = useState(new Date())
-    function handleChangestart_time(event)
-    {
-        const value = event.target.value
-        setstart_time(value)
-    }
-
-    const [StartTime, setStartTime] = useState('')
-    function handleChangeStartTime(event)
-    {
-        const value = event.target.value
-        setStartTime(value)
-    }
-
-    const [end_time, setend_time] = useState(new Date())
-    function handleChangeend_time(event)
-    {
-        const value = event.target.value
-        setend_time(value)
-    }
-
-    const [EndTime, setEndTime] = useState('')
-    function handleChangeEndTime(event)
-    {
-        const value = event.target.value
-        setEndTime(value)
-    }
+    const [start_time, setstart_time] = useState('')
+    const [end_time, setend_time] = useState('')
 
     
     //let start = start_time + "T"+StartTime + "00.000+05:30";
@@ -102,7 +54,7 @@ function About() {
                             let contest = response.data.contest._id;
                             history.push({
                                 pathname:"/LocationsForm",
-                                locationProps: {locations, contest}
+                                locationProps: {locations, contest, participants}
                             })
                         } 
                     }

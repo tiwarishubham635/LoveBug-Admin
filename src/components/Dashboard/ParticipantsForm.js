@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {Card, Form, Row, Col, Button } from 'react-bootstrap';
-import {Link, useHistory} from 'react-router-dom';
+import { useHistory} from 'react-router-dom';
 import './About.css';
 import axios from 'axios';
-var locationID = [];
 
 function ParticipantsForm(props) {
     let contest = props.location.participantProps.contest;

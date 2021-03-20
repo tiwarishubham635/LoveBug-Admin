@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {Card, Form, Row, Col, Button } from 'react-bootstrap';
-import {Link, useHistory} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import './About.css';
 import axios from 'axios';
 var locationID = [];
@@ -112,7 +112,7 @@ function LocationsForm(props) {
         <div className='About'>
             <Card style={{background:"#4a47a3", width:"50vw", height:"75vh", marginTop:"2rem", marginLeft:"33vw", color:"white", padding:"5vh", paddingLeft:"7vh"}}>
                 <Card.Title style={{marginBottom:"2rem", marginTop:"-1rem",marginLeft:"auto", marginRight:"auto", fontSize:"3rem"}}>
-                    Locations and Questions
+                    {count===1?'Locations and Questions':'Location '+ (count-1) +' is Added !!!'}
                 </Card.Title>
             <Form>
                 <Row>
