@@ -1,8 +1,0 @@
-.Locations {
-  background-color: lightgray;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  z-index: 2;
-  height: 175vh;
-}

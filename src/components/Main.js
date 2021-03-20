@@ -12,10 +12,17 @@ function Main() {
             <Container fluid >
                 <Row>
                     <Col>
-                        <Card style={{marginTop:"1rem", width:"100%"}}>
-                            <Card.Img src='https://images.unsplash.com/photo-1611095970111-fc87b5315dc3?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80' height='400vh'
-                            width=''/>
-                        </Card>
+                        <div className='flip-card'>
+                            <div className='flip-card-inner'>
+                                <div className='flip-card-front'>
+                                   <Card.Img src='https://images.unsplash.com/photo-1611095970111-fc87b5315dc3?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80' />
+                                </div>
+                                <div className='flip-card-back'>
+                                    Hello
+                                </div>
+                            </div>
+                            
+                        </div>
                     </Col>
                     <Col>
                         <Card style={{marginTop:"1rem", width:"100%", height:"25rem", alignItems:"center", justifyContent:"center" }}>
@@ -74,7 +81,7 @@ function Main() {
                     {ContestList.map((item, index) => {
                         return(
                             <Col>
-                                <Card key={index}>
+                                <Card key={index} width='100%'>
                                     <Card.Img src={item.poster} height="200vh"/>
                                 </Card>
                             </Col>

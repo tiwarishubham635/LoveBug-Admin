@@ -5,21 +5,21 @@ import * as AiIcons from 'react-icons/ai';
 import * as BsIcons from 'react-icons/bs';
 import {Link} from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-//import Navbar from './components/Dashboard/Navbar';
+//import Navbar from './components/Navbar';
 
-import About from './components/Dashboard/About'
-import User from './components/Dashboard/User'
-import Contact from './components/Dashboard/Contact'
-import Main from './components/Dashboard/Main'
-import Footer from './components/Dashboard/Footer'
-import {SidebarData} from './components/Dashboard/SidebarData';
-import LocationsForm from './components/Dashboard/LocationsForm';
-import Success from './components/Dashboard/Success';
-import ParticipantsForm from './components/Dashboard/ParticipantsForm';
-import Questions from './components/Dashboard/Questions';
+import About from './components/About'
+import User from './components/User'
+import Contact from './components/Contact'
+import Main from './components/Main'
+import Footer from './components/Footer'
+import {SidebarData} from './components/SidebarData';
+import LocationsForm from './components/LocationsForm';
+import Success from './components/Success';
+import ParticipantsForm from './components/ParticipantsForm';
+import Questions from './components/Questions';
 
-import './components/Dashboard/Navbar.css';
-import './components/Dashboard/Main.css';
+import './components/Navbar.css';
+import './components/Main.css';
 import {IconContext} from 'react-icons';
 
 
@@ -28,6 +28,7 @@ function App() {
   const showSidebar = () => setSidebar(!sidebar)
 
   const [menu, setMenu] = useState(false)
+  console.log(menu);
   const otherMenu = () => setMenu(true)
   const homeMenu = () => setMenu(false)
   return (
