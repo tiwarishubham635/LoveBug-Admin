@@ -54,7 +54,7 @@ function LocationsForm(props) {
                         })
                         
                       setCount(count+1);
-                      if(count >= n)
+                      if(count > n)
                       {
                           console.log("success")
                           console.log(locationID)
@@ -85,42 +85,42 @@ function LocationsForm(props) {
             <Card style={{background:"#4a47a3", width:"50vw", height:"75vh", marginTop:"2rem",marginLeft:"32vw", marginRight:"auto", color:"white", padding:"5vh", paddingLeft:"7vh"}}>
             
                 <Card.Title style={{marginBottom:"2rem", marginTop:"-1rem",marginLeft:"auto", marginRight:"auto", fontSize:"3rem"}}>
-                    {count===1?'Locations and Questions':'Location '+ (count-1) +' is Added !!!'}
+                    Locations Details
                 </Card.Title>
             <Form>
                 <Row>
                     <Col md> {/* md - adds responsiveness to columns*/}
-                    <Row>
-                        <Row style={{marginLeft:"1rem"}}>
+                    
+                        <Row style={{marginLeft:""}}>
                             <Card.Title style={{marginBottom:"2rem", marginTop:"-1rem", width:"50vw"}}>
                                 For given Location, Enter the following details:
                             </Card.Title>
                         </Row>
                         
-                            <Form.Group controlId='formLattitude' style={{width:"21vw", marginRight:"2rem"}}>
+                            <Form.Group controlId='formLattitude' style={{width:"40vw", marginRight:"2rem"}}>
                             <Row>
                                 <Col>
-                                <Form.Label  style={{fontSize:"0.9rem"}}> Lattitude</Form.Label>
+                                <Form.Label  style={{}}> Lattitude</Form.Label>
                                 </Col>
                                 
                                 <Col>
-                                <Form.Control type = 'name' value={lat} onChange={handleChangeLat}  placeholder='' style={{width:"10vw"}}/>
+                                <Form.Control type = 'name' value={lat} onChange={handleChangeLat}  placeholder='' style={{width:"30vw"}}/>
                                 </Col>
                                 
                             </Row>
                             </Form.Group>
-                            <Form.Group controlId='formNoOfLongitude' style={{width:"21vw"}}>
+                            <Form.Group controlId='formNoOfLongitude' style={{width:"40vw", marginBottom:"2rem"}}>
                             <Row>
                                 <Col>
-                                <Form.Label name ='lng'  style={{fontSize:"0.9rem"}}>Longitude</Form.Label>
+                                <Form.Label name ='lng'  style={{}}>Longitude</Form.Label>
                                 </Col>
                                 
                                 <Col>
-                                <Form.Control type = 'name' value={lng} onChange={handleChangeLng} placeholder='' style={{width:"10vw"}}/>
+                                <Form.Control type = 'name' value={lng} onChange={handleChangeLng} placeholder='' style={{width:"30vw"}}/>
                                 </Col>
                             </Row>
                             </Form.Group>
-                        </Row>
+                        
                     </Col>
                 </Row>
                 <Row style={{justifyContent:"center"}}>

@@ -52,7 +52,7 @@ function Questions(props) {
             console.log(response)
             setCount(count+1);
             setDiff(diff+1);
-            console.log('diff',diff)
+            console.log('diff',diff,count)
             if(count >= 3)
             {
                 console.log("success")
@@ -85,9 +85,9 @@ function Questions(props) {
             <Row>
                 <Col md> {/* md - adds responsiveness to columns*/}
                 <Row>
-                    <Row style={{marginLeft:"17rem"}}>
+                    <Row style={{marginLeft:""}}>
                         <Card.Title style={{marginBottom:"2rem", marginTop:"-1rem", width:"50vw"}}>
-                            Location {location_count}
+                        For given Location, Enter the following details:
                         </Card.Title>
                     </Row>
                         <Form.Group controlId='formQName' style={{width:"21vw", marginRight:"2rem"}}>
@@ -130,7 +130,7 @@ function Questions(props) {
                             </Col>
                             
                             <Col>
-                            <Form.Control as="select" value = {diff} onChange={handleDiff} style={{width:"10vw"}} disabled>
+                            <Form.Control as="select" value = {diff} onChange={handleDiff} style={{width:"10vw"}}>
                                     <option>0</option>
                                     <option>1</option>
                                     <option>2</option>
