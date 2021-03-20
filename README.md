@@ -70,7 +70,7 @@ npm run server
 - #### Front End
 
 ```
-npm run serve
+npm start
 ```
 
 
