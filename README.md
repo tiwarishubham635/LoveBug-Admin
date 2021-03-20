@@ -15,7 +15,35 @@ The primary identity of the website, i.e., the name is LoveBug. The programmers 
 ### ✔ Salient Features
 
 - #### Personalised IDE with blazing fast compilation
-- ### Real Time Location tracker
-- ### Intuitive, responsive and enthralling UI
-- ### Provides One-to-One Interactions and Group Chats
-- ### Substantial Practice Set for Skill Development
+- #### Real Time Location tracker
+- #### Intuitive, responsive and enthralling UI
+- #### Provides One-to-One Interactions and Group Chats
+- #### Substantial Practice Set for Skill Development
+
+### ✔ Technologies used ⚙
+
+#### Front End :
+
+- VueJS (User)
+- ReactJS (Admin)
+- Firebase Storage and Authentication
+
+#### Back End :
+
+- NodeJS
+- Firebase Authentication
+- Express
+- MongoDB ( mongoose ORM )
+
+### ✔ To run the repository on the system:
+
+1.  Clone the repository using "git clone https://github.com/tiwarishubham635/CSAI-Department-Website.git"
+2.  Main Server
+
+```
+npm i
+```
+
+```
+node index.js
+```
