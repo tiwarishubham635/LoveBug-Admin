@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from 'react'
-import {Card, Form, Row, Col, Button } from 'react-bootstrap';
-import {Link, useHistory} from 'react-router-dom';
+import React  from 'react'
+import {Card,  Row, Button } from 'react-bootstrap';
+import {Link, } from 'react-router-dom';
 import './About.css';
-import axios from 'axios';
-var locationID = [];
 
 function Success(props) {
     return (

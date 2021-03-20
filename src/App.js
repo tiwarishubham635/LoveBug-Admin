@@ -16,6 +16,7 @@ import {SidebarData} from './components/Dashboard/SidebarData';
 import LocationsForm from './components/Dashboard/LocationsForm';
 import Success from './components/Dashboard/Success';
 import ParticipantsForm from './components/Dashboard/ParticipantsForm';
+import Questions from './components/Dashboard/Questions';
 
 import './components/Dashboard/Navbar.css';
 import './components/Dashboard/Main.css';
@@ -88,6 +89,8 @@ function App() {
                 <Route path ='/LocationsForm' component={LocationsForm}/>
                 <Route path ='/ParticipantsForm' component={ParticipantsForm}/>
                 <Route path ='/Success' component={Success}/>
+                <Route path ='/Questions' component={Questions}/>
+
              </Switch>
              <div className={sidebar?'Short-Main':'Main'}>
                   <Main/>
