@@ -1,6 +1,6 @@
 # < LOVE BUG />
 
-🔗 https://lovebugmain.herokuapp.com/
+🔗 https://lovebugadmin.herokuapp.com/
 
 ![Untitled-2](https://user-images.githubusercontent.com/59276987/111880418-7b049480-89d1-11eb-84b6-d472342c3d6e.jpg)
 
@@ -17,7 +17,7 @@ We all know that our Coding geeks might be charming their way in contests with t
 The primary identity of the website, i.e., the name is LoveBug. The programmers can solve an infinite number of problems on varying difficulty levels and will help them to easily connect with other people in their nearby locations. The website can track the current location of the users and the algorithm of the website will enable them to connect with the other users who stand in the LeaderBoard of LoveBug platform.
 
 ## ✔ How It works :
-- Organizers/admin creates a contest from the admin end whih is at URL
+- Organizers/admin creates a contest from the admin end whih is at https://lovebugadmin.herokuapp.com/
 - He enters a start location and an end location 
 - He creates multiple intermediate checkoints between the two ( We are using Google APIs for these )
 - For each location he enters 3 questions ( easy , medium and hard )
