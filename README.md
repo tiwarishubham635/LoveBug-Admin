@@ -45,7 +45,7 @@ npm i
 ```
 
 ```
-node index.js
+npm run backend
 ```
 
 - #### User End
