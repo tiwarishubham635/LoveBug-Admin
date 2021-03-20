@@ -1,0 +1,23 @@
+.Footer {
+  background-color: #7868e6;
+  height: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Short-Footer {
+  width: 82vw;
+  margin-left: auto;
+  background-color: #7868e6;
+  height: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
