@@ -1,6 +1,6 @@
 # < LOVE BUG />
 
-## _Coders be solving complex Problems and still struggling to find their Best Match ?_
+## _Coders be solving complex Problems but struggling to find their Best Match ?_
 
 ## _Don't Worry! We are here..._
 
