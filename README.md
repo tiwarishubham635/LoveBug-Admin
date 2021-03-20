@@ -1,4 +1,5 @@
 # < LOVE BUG />
+####  >> This is the Admin-part <<
 
 ## _Coders be solving complex Problems but struggling to find their Best Match ? Don't Worry! We are here..._
 
@@ -35,23 +36,13 @@ The primary identity of the website, i.e., the name is LoveBug. The programmers 
 - Express
 - MongoDB ( mongoose ORM )
 
-## ✔ To run the repository on the system:
+## ✔ To run this Admin-End  on the system:
 
 - #### Clone the repository using "git clone https://github.com/tiwarishubham635/CSAI-Department-Website.git"
 - #### Main Server
 
 ```
 npm i
-```
-
-```
-node index.js
-```
-
-- #### User End
-
-```
-npm run serve
 ```
 
 - #### Admin End
