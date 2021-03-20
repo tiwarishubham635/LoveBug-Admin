@@ -14,7 +14,7 @@ The primary identity of the website, i.e., the name is LoveBug. The programmers 
 
 ### ✔ Salient Features
 
-- ### Personalised IDE with blazing fast compilation
+- #### Personalised IDE with blazing fast compilation
 - ### Real Time Location tracker
 - ### Intuitive, responsive and enthralling UI
 - ### Provides One-to-One Interactions and Group Chats
