@@ -1,13 +1,19 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Container, Row, Col, Card, Button} from 'react-bootstrap';
 import './Main.css';
 import './ContestList';
 import { ContestList1 } from './ContestList';
 import {Link} from 'react-router-dom';
 import { ContestList2 } from './ContestListEven';
+import axios from 'axios'
 
 
 function Main() {
+    const [contests, setContests] = useState([])
+
+    useEffect(() => {
+        axios.get('/api/contests/hack').then(response=>{console.log(response); setContests(response.data)})
+    }, [])
     return (
         <div className='Main-Component'>
             <Container fluid >
@@ -62,27 +68,22 @@ function Main() {
                     Recent Contests
                     </div>
                 </Row>
+
                 <Row style={{marginBottom:"1rem"}}>
-                    {ContestList1.map((item, index) => {
-                        return(
-                            <Col>
-                                <Card key={index} style={{cursor:"pointer"}}>
-                                    <Card.Img src={item.poster} height="200vh"/>
-                                </Card>
-                            </Col>
-                        );
-                    })}
-                </Row>
-                <Row style={{marginBottom:"1rem"}}>
-                    {ContestList2.map((item, index) => {
-                        return(
-                            <Col>
-                                <Card key={index} style={{cursor:"pointer"}}>
-                                    <Card.Img src={item.poster} height="200vh"/>
-                                </Card>
-                            </Col>
-                        );
-                    })}
+                {contests.map((item, index) => {
+                            return(
+                                <Col>
+                                    <Card key={index} style={{cursor:"pointer", color:"black"}}>
+                                        <Card.Img src='./logo.jpg' height="200vh"/>
+                                        <Card.Body>
+                                            <Card.Title>
+                                                {item.name}
+                                            </Card.Title>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            );
+                        })}
                 </Row>
 
                 

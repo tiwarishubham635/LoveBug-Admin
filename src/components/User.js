@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Container, Row, Col, Card, Button} from 'react-bootstrap';
-import { ContestList1 } from './ContestList';
-import { ContestList2 } from './ContestListEven';
+import {Container, Row, Col, Card} from 'react-bootstrap';
 import './About.css'
 import axios from 'axios'
 
