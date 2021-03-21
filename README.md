@@ -67,7 +67,7 @@ npm i
 ```
 
 ```
-npm run server
+npm run start
 ```
 
 - #### Front End
