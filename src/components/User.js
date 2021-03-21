@@ -11,18 +11,18 @@ function User() {
     }, [])
 
     return (
-        <div className='About' style={{height:'80vh'}}> 
-            <Card style={{background:"#4a47a3", width:"70vw", height:"100vh", marginTop:"2rem", marginLeft:"23vw", color:"white", padding:"5vh", paddingLeft:"7vh"}}>
+        <div className='About' style={{height:'220vh'}}> 
+            <Card style={{background:"#4a47a3", width:"70vw", height:"220vh", marginTop:"2rem", marginLeft:"23vw", color:"white", padding:"5vh", paddingLeft:"7vh"}}>
                 <Container >
                     <Row>
                             <div style={{color:"white", marginBottom:"1rem", marginLeft:"1rem"}}>
                             Running Contests
                             </div>
                     </Row>
-                    <Row style={{marginBottom:"1rem"}}>
+                    <Row style={{marginBottom:"1rem", marginLeft:"8rem"}}>
                         {contests.map((item, index) => {
                             return(
-                                <Col>
+                                <Row>
                                     <Card key={index} style={{cursor:"pointer", color:"black"}}>
                                         <Card.Img src='./logo.jpg' height="200vh"/>
                                         <Card.Body>
@@ -31,7 +31,7 @@ function User() {
                                             </Card.Title>
                                         </Card.Body>
                                     </Card>
-                                </Col>
+                                </Row>
                             );
                         })}
                         

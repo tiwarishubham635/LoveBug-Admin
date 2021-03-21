@@ -69,10 +69,10 @@ function Main() {
                     </div>
                 </Row>
 
-                <Row style={{marginBottom:"1rem"}}>
+                <Row style={{marginBottom:"1rem", marginLeft:"4rem"}}>
                 {contests.map((item, index) => {
                             return(
-                                <Col>
+                                <Row>
                                     <Card key={index} style={{cursor:"pointer", color:"black"}}>
                                         <Card.Img src='./logo.jpg' height="200vh"/>
                                         <Card.Body>
@@ -81,7 +81,7 @@ function Main() {
                                             </Card.Title>
                                         </Card.Body>
                                     </Card>
-                                </Col>
+                                </Row>
                             );
                         })}
                 </Row>
