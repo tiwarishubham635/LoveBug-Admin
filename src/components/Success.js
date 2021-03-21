@@ -12,7 +12,7 @@ function Success(props) {
                     Congratulations
                 </Card.Title>
                 <Card.Text style={{marginBottom:"2rem", marginTop:"-1rem",marginLeft:"auto", marginRight:"auto", fontSize:"4rem", textAlign:"center"}}>
-                    Contest Created Successfully !!!
+                    {props.location.props} Created Successfully !!!
                 </Card.Text>
                 <Link to='/'>
                     <Row style={{justifyContent:"center"}}>

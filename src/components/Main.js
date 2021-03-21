@@ -2,8 +2,9 @@ import React from 'react';
 import {Container, Row, Col, Card, Button} from 'react-bootstrap';
 import './Main.css';
 import './ContestList';
-import { ContestList } from './ContestList';
+import { ContestList1 } from './ContestList';
 import {Link} from 'react-router-dom';
+import { ContestList2 } from './ContestListEven';
 
 
 function Main() {
@@ -18,7 +19,13 @@ function Main() {
                                    <Card.Img src='https://images.unsplash.com/photo-1611095970111-fc87b5315dc3?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80' />
                                 </div>
                                 <div className='flip-card-back'>
-                                    Hello
+                                    <div className='welcome-text'>
+                                        <i>Coding expert but unable to find your Best Match ? Don't Worry! We are here..</i>
+                                    </div>
+                                    <br/>
+                                    <div className='welcome'>
+                                        Welcome to &lt; LOVE BUG /&gt;
+                                    </div> 
                                 </div>
                             </div>
                             
@@ -56,10 +63,10 @@ function Main() {
                     </div>
                 </Row>
                 <Row style={{marginBottom:"1rem"}}>
-                    {ContestList.map((item, index) => {
+                    {ContestList1.map((item, index) => {
                         return(
                             <Col>
-                                <Card key={index}>
+                                <Card key={index} style={{cursor:"pointer"}}>
                                     <Card.Img src={item.poster} height="200vh"/>
                                 </Card>
                             </Col>
@@ -67,27 +74,17 @@ function Main() {
                     })}
                 </Row>
                 <Row style={{marginBottom:"1rem"}}>
-                    {ContestList.map((item, index) => {
+                    {ContestList2.map((item, index) => {
                         return(
                             <Col>
-                                <Card key={index}>
+                                <Card key={index} style={{cursor:"pointer"}}>
                                     <Card.Img src={item.poster} height="200vh"/>
                                 </Card>
                             </Col>
                         );
                     })}
                 </Row>
-                <Row style={{marginBottom:"1rem"}}>
-                    {ContestList.map((item, index) => {
-                        return(
-                            <Col>
-                                <Card key={index} width='100%'>
-                                    <Card.Img src={item.poster} height="200vh"/>
-                                </Card>
-                            </Col>
-                        );
-                    })}
-                </Row>
+
                 
             </Container>
         </div>

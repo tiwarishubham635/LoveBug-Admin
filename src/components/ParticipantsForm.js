@@ -58,6 +58,7 @@ function ParticipantsForm(props) {
                           }*/
                           history.push({
                             pathname:"/Success",
+                            props:"Contest"
                         })
                       }
                       else
