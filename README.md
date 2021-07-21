@@ -1,7 +1,6 @@
 # < LOVE BUG />
   
   #### User Application : https://lovebugmain.herokuapp.com <br/>
-  #### Admin Website: https://lovebugadmin.herokuapp.com <br/>
 
 ![Untitled-2](https://user-images.githubusercontent.com/59276987/111880418-7b049480-89d1-11eb-84b6-d472342c3d6e.jpg)
 
